@@ -8,29 +8,31 @@
 
 .PHONY: venv
 venv:
-    python{{ cookiecutter.python_version }} -m venv .venv
-    .venv/bin/pip install -U pip
-    .venv/bin/pip install -e .
-    .venv/bin/pre-commit install
+	python3.9 -m venv .venv
+	git init
+	.venv/bin/pip install --upgrade pip
+	.venv/bin/pip install poetry
+	.venv/bin/poetry install
+	.venv/bin/pre-commit install
 
 .PHONY: test
 test:
-    .venv/bin/pytest tests/
+	.venv/bin/pytest tests/
 
 .PHONY: format
 format:
-    .venv/bin/black .
-    .venv/bin/isort .
+	.venv/bin/black .
+	.venv/bin/isort .
 
 .PHONY: lint
 lint:
-    .venv/bin/flake8 .
+	.venv/bin/flake8 .
 
 .PHONY: clean
 clean:
-    rm -rf __pycache__
-    rm -rf .mypy_cache
-    rm -rf .pytest_cache
-    rm -rf *.egg-info
-    rm -rf dist
-    rm -rf build
+	rm -rf __pycache__
+	rm -rf .mypy_cache
+	rm -rf .pytest_cache
+	rm -rf *.egg-info
+	rm -rf dist
+	rm -rf build
