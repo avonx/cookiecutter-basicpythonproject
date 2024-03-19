@@ -1,0 +1,16 @@
+# pre-commitの使用:
+#     - `.pre-commit-config.yaml`ファイルを使用して、pre-commitの設定を行います。
+#     - リポジトリのURLと、使用するhookの種類（black、flake8など）を指定します。
+#     - `pre-commit install`コマンドを実行して、pre-commitをインストールします。
+#     - コミット時に、自動的にblackでのフォーマットとflake8でのリンティングが実行されます。
+#     - コミット前に問題が見つかった場合、コミットが中断され、修正が必要になります。
+repos:
+-   repo: https://github.com/psf/black
+    rev: 22.3.0
+    hooks:
+    - id: black
+      language_version: python{{ cookiecutter.python_version }}
+-   repo: https://github.com/PyCQA/flake8
+    rev: 4.0.1
+    hooks:
+    - id: flake8

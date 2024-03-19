@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "{{ cookiecutter.project_name }}"
+version = "{{ cookiecutter.version }}"
+description = "{{ cookiecutter.project_description }}"
+authors = ["{{ cookiecutter.author_name }} <{{ cookiecutter.author_email }}>"]
+
+[tool.poetry.dependencies]
+# 依存関係の管理:
+#     - `pyproject.toml`ファイルを使用して、プロジェクトの依存関係を管理します。
+#     - `[tool.poetry.dependencies]`セクションに、プロジェクトの実行に必要な依存関係を記述します。
+#     - `[tool.poetry.dev-dependencies]`セクションに、開発時のみ必要な依存関係（テストフレームワーク、リンター、フォーマッターなど）を記述します。
+#     - `poetry add`コマンドを使用して、新しい依存関係を追加します。
+#     - `poetry install`コマンドを使用して、依存関係をインストールします。
+#     - `poetry update`コマンドを使用して、依存関係を更新します。
+#     - `poetry remove`コマンドを使用して、依存関係を削除します。
+#     - `poetry show`コマンドを使用して、依存関係を表示します。
+python = "^{{ cookiecutter.python_version }}"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+black = "^22.3.0"
+isort = "^5.10.1"
+flake8 = "^4.0.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py{{ cookiecutter.python_version.replace(".", "") }}']
+
+[tool.isort]
+profile = "black"

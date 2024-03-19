@@ -1,10 +1,9 @@
 {
-    "project_name": "Basic Python Project",
-    "module_name": "basicpythonproject",
-    "author_name": "Takashi Hattori",
+    "project_name": "my-awesome-project",
+    "module_name": "my_module",
+    "project_description": "A short description of the project.",
+    "author_name": "avonx",
     "author_email": "hattori@xnova-tech.com",
-    "github_username": "avonx",
-    "project_version": "0.1.0",
-    "project_short_description": "A basic Python project.",
-    "coc_contact_info": "hattori@xnova-tech.com"
+    "python_version": "3.9",
+    "version": "0.1.0"
 }
