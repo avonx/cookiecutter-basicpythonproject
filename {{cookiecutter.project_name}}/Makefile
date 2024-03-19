@@ -8,7 +8,7 @@
 
 .PHONY: venv
 venv:
-	python3.9 -m venv .venv
+	python{{ cookiecutter.python_version }} -m venv .venv
 	git init
 	.venv/bin/pip install --upgrade pip
 	.venv/bin/pip install poetry
