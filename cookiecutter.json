@@ -4,6 +4,6 @@
     "project_description": "A short description of the project.",
     "author_name": "avonx",
     "author_email": "hattori@xnova-tech.com",
-    "python_version": "3.11",
+    "python_version": "3.10",
     "version": "0.1.0"
 }
