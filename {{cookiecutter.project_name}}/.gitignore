@@ -128,3 +128,6 @@ dmypy.json
 
 # poetry lock file
 poetry.lock
+
+# output
+output/
