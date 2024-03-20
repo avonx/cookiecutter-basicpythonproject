@@ -12,6 +12,7 @@ venv:
 	git init
 	.venv/bin/pip install --upgrade pip
 	.venv/bin/pip install poetry
+	.venv/bin/poetry config virtualenvs.in-project true
 	.venv/bin/poetry install
 	.venv/bin/pre-commit install
 

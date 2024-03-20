@@ -6,11 +6,17 @@
 #     - コミット前に問題が見つかった場合、コミットが中断され、修正が必要になります。
 repos:
 -   repo: https://github.com/psf/black
-    rev: 22.3.0
+    rev: 24.3.0
     hooks:
     - id: black
-      language_version: python{{ cookiecutter.python_version }}
--   repo: https://github.com/PyCQA/flake8
-    rev: 4.0.1
-    hooks:
-    - id: flake8
+      args: [--target-version=py310]
+      language_version: python3.10
+# -   repo: https://github.com/hhatto/autopep8.git
+#     rev: v2.1.0
+#     hooks:
+#     -   id: autopep8
+#         args: [--in-place, --aggressive, --aggressive]
+# -   repo: https://github.com/PyCQA/flake8
+#     rev: 4.0.1
+#     hooks:
+#     - id: flake8
