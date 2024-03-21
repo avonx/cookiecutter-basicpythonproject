@@ -14,7 +14,7 @@ authors = ["{{ cookiecutter.author_name }} <{{ cookiecutter.author_email }}>"]
 #     - `poetry update`コマンドを使用して、依存関係を更新します。
 #     - `poetry remove`コマンドを使用して、依存関係を削除します。
 #     - `poetry show`コマンドを使用して、依存関係を表示します。
-python = "^{{ cookiecutter.python_version }}"
+python = ">={{ cookiecutter.python_version }},<3.13"
 
 [tool.poetry.dev-dependencies]
 pre-commit = "^3.6.2"
